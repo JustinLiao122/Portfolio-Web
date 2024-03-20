@@ -1,15 +1,4 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelectorAll('.nav__link')
 
-navToggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
-});
-
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        document.body.classList.remove('nav-open');
-    })
-})
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,3 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
         glow.style.top = mouseY + 'px';
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  var aboutMeBody = document.querySelector('.aboutme__body--aboutme');
+
+  // Enable scrolling on hover
+  aboutMeBody.addEventListener('mouseenter', function() {
+    aboutMeBody.style.overflowY = 'auto';
+  });
+
+  // Disable scrolling when not hovering
+  aboutMeBody.addEventListener('mouseleave', function() {
+    aboutMeBody.style.overflowY = 'hidden';
+  });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollContainer = document.querySelector('.hobbies-scrollable');
+  scrollContainer.scrollLeft = 0; // Explicitly set the scroll position to the start
+});
+
+
+
